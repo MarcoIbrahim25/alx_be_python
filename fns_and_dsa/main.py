@@ -18,9 +18,10 @@ def main():
 
         choice = int(input("Enter your choice: "))
 
-        # 🟡 you're using int() for input, so compare with numbers, not strings
+        
         if choice == 1:
-            item = input("Enter the item to add: ").strip()
+            item = input("Enter the item to add: ")
+            item = item.strip()
             shopping_list.append(item)
             print(f"'{item}' has been added to your shopping list.")
         
