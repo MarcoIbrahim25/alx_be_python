@@ -10,22 +10,21 @@ def main():
     result = perform_operation(num1, num2, operation)
     print(f"Result: {result}")
 
-if __name__ == "__main__":
-    main()
+    # ✅ THIS MUST BE INSIDE main()
+    shopping_list = []
 
-shopping_list = []
-    
-while True:
+    while True:
         display_menu()
 
         choice = int(input("Enter your choice: "))
 
-        if choice == '1':
+        # 🟡 you're using int() for input, so compare with numbers, not strings
+        if choice == 1:
             item = input("Enter the item to add: ").strip()
             shopping_list.append(item)
             print(f"'{item}' has been added to your shopping list.")
         
-        elif choice == '2':
+        elif choice == 2:
             item = input("Enter the item to remove: ").strip()
             if item in shopping_list:
                 shopping_list.remove(item)
@@ -33,7 +32,7 @@ while True:
             else:
                 print(f"'{item}' not found in your shopping list.")
         
-        elif choice == '3':
+        elif choice == 3:
             if shopping_list:
                 print("\nYour Shopping List:")
                 for i, item in enumerate(shopping_list, start=1):
@@ -41,19 +40,12 @@ while True:
             else:
                 print("Your shopping list is empty.")
         
-        elif choice == '4':
+        elif choice == 4:
             print("Goodbye!")
             break
         
         else:
             print("Invalid choice. Please try again.")
 
-
 if __name__ == "__main__":
     main()
-
-
-
-
-
-
