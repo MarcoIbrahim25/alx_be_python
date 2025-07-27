@@ -1,4 +1,5 @@
 from arithmetic_operations import perform_operation
+from shopping_list_manager import display_menu
 
 def main():
     print("Arithmetic Operations")
@@ -12,14 +13,9 @@ def main():
 if __name__ == "__main__":
     main()
 
-
-
-from shopping_list_manager import display_menu
-
-
-def main():
-    shopping_list = []
-    while True:
+shopping_list = []
+    
+while True:
         display_menu()
 
         choice = int(input("Enter your choice: "))
@@ -52,5 +48,12 @@ def main():
         else:
             print("Invalid choice. Please try again.")
 
+
 if __name__ == "__main__":
     main()
+
+
+
+
+
+
