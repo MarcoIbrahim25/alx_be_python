@@ -1,24 +1,23 @@
 from arithmetic_operations import perform_operation
 from shopping_list_manager import display_menu
+from explore_datetime import display_current_datetime, calculate_future_date  # ✅ new import
 
 def main():
+   
     print("Arithmetic Operations")
     num1 = float(input("Enter the first number: "))
     num2 = float(input("Enter the second number: "))
     operation = input("Enter the operation (add, subtract, multiply, divide): ").strip().lower()
-
     result = perform_operation(num1, num2, operation)
     print(f"Result: {result}")
 
-    # ✅ THIS MUST BE INSIDE main()
+    
     shopping_list = []
 
     while True:
         display_menu()
-
         choice = int(input("Enter your choice: "))
 
-        
         if choice == 1:
             item = input("Enter the item to add: ")
             item = item.strip()
@@ -48,6 +47,13 @@ def main():
         
         else:
             print("Invalid choice. Please try again.")
+
+   
+    print("\nCurrent Date and Time:")
+    display_current_datetime()
+
+    print("\nCalculate a Future Date:")
+    calculate_future_date()
 
 if __name__ == "__main__":
     main()
