@@ -1,7 +1,7 @@
 from arithmetic_operations import perform_operation
 from shopping_list_manager import display_menu
 from explore_datetime import display_current_datetime, calculate_future_date
-import datetime
+from explore_datetime import datetime
 def main():
    
     print("Arithmetic Operations")
