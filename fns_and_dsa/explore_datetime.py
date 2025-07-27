@@ -1,5 +1,7 @@
 import datetime
-def  display_current_datetime ()
+
+def  display_current_datetime() :
+    
     now= datetime.datetime.now()
     date= now.strftime ("%Y-%m-%d %H:%M:%S")
     print("Current Date and Time:", date)
